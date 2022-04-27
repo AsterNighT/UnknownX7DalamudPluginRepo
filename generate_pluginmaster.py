@@ -5,8 +5,7 @@ from sys import argv
 from os.path import getmtime
 from zipfile import ZipFile, ZIP_DEFLATED
 
-BRANCH = os.environ['GITHUB_REF'].split('refs/heads/')[-1]
-DOWNLOAD_URL = 'https://github.com/UnknownX7/DalamudPluginRepo/raw/{branch}/plugins/{plugin_name}/latest.zip'
+DOWNLOAD_URL = 'https://github.com/AsterNighT/UnknownX7DalamudPluginRepo/raw/old/plugins/{plugin_name}/latest.zip'
 
 DEFAULTS = {
     'IsHide': False,
@@ -68,7 +67,7 @@ def extract_manifests():
 def add_extra_fields(manifests):
     for manifest in manifests:
         # generate the download link from the internal assembly name
-        manifest['DownloadLinkInstall'] = DOWNLOAD_URL.format(branch=BRANCH, plugin_name=manifest["InternalName"])
+        manifest['DownloadLinkInstall'] = DOWNLOAD_URL.format(plugin_name=manifest["InternalName"])
         # add default values if missing
         for k, v in DEFAULTS.items():
             if k not in manifest:

@@ -129,11 +129,11 @@
     },
     {
         "Author": "UnknownX",
-        "Name": "ReAction",
+        "Name": "ReActionCN",
         "Punchline": "QoL for the battle system.",
         "Description": "Improves aspects of the battle system with action stacks (like MOAction) and various QoL settings.",
         "Changelog": "New decombos, support for placing things on the cross hotbars, new /macroqueue command",
-        "InternalName": "ReAction",
+        "InternalName": "ReActionCN",
         "AssemblyVersion": "1.1.6.0",
         "RepoUrl": "https://github.com/UnknownX7/ReAction",
         "ApplicableVersion": "any",
